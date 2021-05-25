@@ -8,6 +8,9 @@ class ForecastWeatherWithoutAlomafireViewController: UIViewController {
     var forecast: [Category] = []
 
     override func viewDidLoad() {
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
         let loader = CategoriesLoader()
         loader.delegate = self
@@ -36,10 +39,4 @@ extension ForecastWeatherWithoutAlomafireViewController: UITableViewDataSource {
         cell.wind.text = String(cat.wind)
         return cell
     }
-    
-   
-    
-    
-    
-    
 }
